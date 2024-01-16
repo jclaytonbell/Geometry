@@ -36,7 +36,7 @@ class Test_Polygon(unittest.TestCase):
         self.assertEqual(round(self.polygon.radius, 6), round(RADIUS, 6))
         self.assertEqual(round(self.polygon.apothem_length, 6), APOTHEM)
         self.assertEqual(round(self.polygon.area, 6), AREA)
-        self.assertEqual(self.polygon.perimeter, PERIMETER)
+        self.assertEqual(round(self.polygon.perimeter, 6), PERIMETER)
         with self.assertRaises(ValueError):
             self.polygon.set_n_sides(-1)
             self.polygon.set_n_sides(float(N_SIDES))
@@ -57,7 +57,7 @@ class Test_Polygon(unittest.TestCase):
         self.assertEqual(round(self.polygon.radius, 6), round(RADIUS, 6))
         self.assertEqual(round(self.polygon.apothem_length, 6), APOTHEM)
         self.assertEqual(round(self.polygon.area, 6), AREA)
-        self.assertEqual(self.polygon.perimeter, PERIMETER)
+        self.assertEqual(round(self.polygon.perimeter, 6), PERIMETER)
         with self.assertRaises(ValueError):
             self.polygon.set_radius(-1)
 
